@@ -8,6 +8,9 @@ struct Books {
   int book_id;
 };
 
+/* function declaration */
+void printBook( struct Books *book );
+
 int main() {
   struct Books book1;
   struct Books book2;
@@ -18,13 +21,14 @@ int main() {
   strcpy( book2.title, "Telecom Billing");
   strcpy( book2.author, "Zara Ali");
 
-  printf("Book 1 title : %s\n", book1.title);
-  printf("Book 1 author : %s\n", book1.author);
-  
-  printf("Book 2 title : %s\n", book2.title);
-  printf("Book 2 author : %s\n", book2.author);
+  printBook( &book1 );
+  printBook( &book2 );
 
-  return 0;
+  return 0; 
 }
 
+void printBook( struct Books *book) {
+  printf("Book title : %s\n", book->title);
+  printf("Book author : %s\n", book->author);
+}
 
