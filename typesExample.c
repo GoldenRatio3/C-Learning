@@ -8,6 +8,9 @@ typedef struct Books {
   int book_id;
 } Book;
 
+#define TRUE 1
+#define FALSE 0
+
 int main() {
   Book book;
 
@@ -20,6 +23,9 @@ int main() {
   printf("Book author: %s\n", book.author);
   printf("Book subject: %s\n", book.subject);
   printf("Book id: %d\n", book.book_id);
+
+  printf("Value of TRUE is %d\n", TRUE);
+  printf("Value of FALSE is %d\n", FALSE);
 
   return 0;
 }
