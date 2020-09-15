@@ -4,12 +4,13 @@
 
 int main() {
   char str[MAX];
+  int i;
 
   printf("Enter a value: ");
-  fgets(str, MAX, stdin);
+  scanf("%s %d", str, &i);
 
-  printf("\nYou entered: ");
-  puts(str);
+  printf("\nYou entered: %s %d ", str, i);
+  /*puts(str);*/
 
   return 0;
 }
