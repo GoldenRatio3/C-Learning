@@ -3,7 +3,11 @@
 #define message_for(a, b) \
   printf(#a " and " #b ": Happy B day!\n");
 
-#define tokenpaster(n) printf("token" #n " = %d", token##n);
+#define tokenpaster(n) printf("token" #n " = %d\n", token##n);
+
+#if !defined(MESSAGE)
+  #define MESSAGE "You wish!"
+#endif
 
 int main() {
   printf("File: %s\n", __FILE__);
@@ -15,6 +19,8 @@ int main() {
 
   int token34 = 40;
   tokenpaster(34);
+
+  printf("Here is the message: %s\n", MESSAGE);
 
   return 0;
 }
