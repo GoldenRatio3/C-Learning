@@ -15,7 +15,7 @@ int main() {
 
   printf("size of array is %lu\n", sizeof arr);
   printf("size of one element in the arr is %lu\n", sizeof arr[0]);
-  printf("real size of arr is %lu\n", sizeof arr / sizeof arr[0]);
+  printf("number of elements in arr is %lu\n", sizeof arr / sizeof arr[0]);
 
   return 0;
 }
